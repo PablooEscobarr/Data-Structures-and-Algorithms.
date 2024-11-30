@@ -1,0 +1,106 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+// Display Invetory
+void displayInventory(const vector<string>& items, const vector<int>& quantities) {
+    cout << "\nInventory List:\n";
+    if (items.empty()) {
+        cout << "Inventory empty!\n";
+    } else {
+        for (size_t i = 0; i < items.size(); ++i) {
+            cout << i + 1 << ". " << items[i] << " - Quantity: " << quantities[i] << endl;
+        }
+    }
+}
+
+// Add new item to the inventory
+void addItem(vector<string>& items, vector<int>& quantities) {
+    string item;
+    int quantity;
+    cout << "\nEnter item name: ";
+    cin >> item;
+    cout << "Enter item quantity: ";
+    cin >> quantity;
+    items.push_back(item);
+    quantities.push_back(quantity);
+    cout << "Item added successfully!\n";
+}
+
+// Update the quantity of existing item
+void updateItem(vector<string>& items, vector<int>& quantities) {
+    int index, newQuantity;
+    displayInventory(items, quantities);
+    if (!items.empty()) {
+        cout << "\nEnter the item number to update: ";
+        cin >> index;
+        if (index > 0 && index <= items.size()) {
+            cout << "Enter the new quantity for " << items[index - 1] << ": ";
+            cin >> newQuantity;
+            quantities[index - 1] = newQuantity;
+            cout << "Quantity updated successfully!\n";
+        } else {
+            cout << "Invalid item number!\n";
+        }
+    }
+}
+
+// Delete an item from the inventory
+void deleteItem(vector<string>& items, vector<int>& quantities) {
+    int index;
+    displayInventory(items, quantities);
+    if (!items.empty()) {
+        cout << "\nEnter the item number to delete: ";
+        cin >> index;
+        if (index > 0 && index <= items.size()) {
+            items.erase(items.begin() + index - 1);
+            quantities.erase(quantities.begin() + index - 1);
+            cout << "Item deleted successfully!\n";
+        } else {
+            cout << "Invalid item number!\n";
+        }
+    }
+}
+
+int main() {
+    vector<string> items;
+    vector<int> quantities;
+    int choice;
+
+    do {
+        // Display the choices
+        cout << "\nInventory\n";
+        cout << "1. Add Item\n";
+        cout << "2. View Inventory\n";
+        cout << "3. Update Item Quantity\n";
+        cout << "4. Delete Item\n";
+        cout << "5. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                addItem(items, quantities);
+                break;
+            case 2:
+                displayInventory(items, quantities);
+                break;
+            case 3:
+                updateItem(items, quantities);
+                break;
+            case 4:
+                deleteItem(items, quantities);
+                break;
+            case 5:
+                cout << "Exiting the program.\n";
+                break;
+            default:
+                cout << "Invalid choice! Please select a valid option.\n";
+        }
+
+    } while (choice != 5);
+
+    return 0;
+}

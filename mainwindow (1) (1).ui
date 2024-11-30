@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>a Another Tag</family>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="centralwidget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>791</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Academy Engraved LET</family>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(15, 73, 143);
+background-color: rgb(36, 92, 158);</string>
+    </property>
+    <widget class="QPushButton" name="viewlatest_2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>290</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border:none;
+	color:black;
+	background-color:white;
+	font: 700 9pt &quot;Arial&quot;;
+	border-radius:40px;
+}
+QPushButton:pressed
+{
+	background-color:silver;
+}</string>
+     </property>
+     <property name="text">
+      <string>View Latest Order</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Title_2">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>0</y>
+       <width>291</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>18</pointsize>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Order Processing System</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Stack_2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>120</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>17</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Stack Operations</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="forcompleteorder_2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>200</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>a Another Tag</family>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="RecentOrder_2">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>160</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Recently Completed Order:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushorder_2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>250</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border:black;
+	color:black;
+	background-color:white;
+	font: 700 9pt &quot;Arial&quot;;
+	border-radius:40px;
+}
+QPushButton:pressed
+{
+	background-color:silver;
+}</string>
+     </property>
+     <property name="text">
+      <string>Push Order</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="poporder_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>250</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border:none;
+	color:black;
+	background-color:white;
+	font: 700 9pt &quot;Arial&quot;;
+	border-radius:40px;
+}
+QPushButton:pressed
+{
+	background-color:silver;
+}</string>
+     </property>
+     <property name="text">
+      <string>Pop Order</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LatestOrder_2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>330</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Latest Order:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Queue_2">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>120</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string> Queue Operations</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Pending_2">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>160</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Pending Order:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="forpending_2">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>200</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Academy Engraved LET</family>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="dequeueorder_2">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>250</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border:none;
+	color:black;
+	background-color:white;
+	font: 700 9pt &quot;Arial&quot;;
+	border-radius:40px;
+}
+QPushButton:pressed
+{
+	background-color:silver;
+}</string>
+     </property>
+     <property name="text">
+      <string>Dequeue Order</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="enqueueorder_2">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>250</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border:none;
+	color:black;
+	background-color:white;
+	font: 700 9pt &quot;Arial&quot;;
+	border-radius:40px;
+}
+QPushButton:pressed
+{
+	background-color:silver;
+}</string>
+     </property>
+     <property name="text">
+      <string>Enqueue Order</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="viewnextorder_2">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>290</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border:none;
+	color:black;
+	background-color:white;
+	font: 700 9pt &quot;Arial&quot;;
+	border-radius:40px;
+}
+QPushButton:pressed
+{
+	background-color:silver;
+}</string>
+     </property>
+     <property name="text">
+      <string>View Next Order</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Next_2">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>330</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Next Order:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Status_2">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>420</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Status:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QMenuBar" name="menubar_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>800</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QStatusBar" name="statusbar_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>3</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
